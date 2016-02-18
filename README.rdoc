@@ -1,5 +1,5 @@
-This is a blog
 ===
----
+This is a blog
+
 
 This is a blog which is going to be axpanded and complete over time.
