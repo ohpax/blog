@@ -1,3 +1,7 @@
-== README
+``` html
+
 <h1>This is a blog</h1>
-<p>This is a blog which is going to be axpanded and complete over time </p>
+<p>This is a blog which is going to be axpanded and complete over time 
+and I am going to use it</p>
+
+```
