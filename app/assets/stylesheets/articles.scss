@@ -1,3 +1,82 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+  font-family: 'blowbrush';
+  src: font-url('blowbrush.eot'); /* IE9 Compat Modes */
+  src: font-url('blowbrush.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		   font-url('blowbrush.woff2') format('woff2'), /* Super Modern Browsers */
+       font-url('blowbrush.woff') format('woff'), /* Pretty Modern Browsers */
+       font-url('blowbrush.ttf')  format('truetype'), /* Safari, Android, iOS */
+       font-url('blowbrush.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'fofer';
+  src: font-url('Fofer.eot'); /* IE9 Compat Modes */
+  src: font-url('Fofer.otf') format('opentype'), /* IE6-IE8 */
+		   
+}
+@font-face {
+  font-family: 'Netsrak';
+  src: font-url('Netsrak.eot'); /* IE9 Compat Modes */
+  src: font-url('Netsrak.otf') format('opentype'), /* IE6-IE8 */
+		   
+}
+body {
+  // background-color: #E9F29D;
+  }
+
+	body h1{
+		display: inline-block;
+	  font-family: 'Netsrak';
+	  font-size: 1.4em;
+	  border-top: 2px double #51456B;
+	  border-bottom: 2px solid #51456B;
+	  padding: 6px 5px;
+
+	}
+ 
+.post-list {
+	h2 {
+	font-family: 'blowbrush';
+	text-transform : uppercase;
+	font-weight: bold;
+	font-size: 2em;
+	padding: 0 10px;
+	margin-bottom: 0;
+	}
+
+	h2 a{
+ 	color: #51456B;
+ 	transition: color , 500ms;
+	}
+
+	h2 a:hover{
+	color: #6F5F94;
+	background: none;
+	text-decoration: none;}
+
+}
+.last_article {
+	border-bottom: 2px dashed #B7C29D;
+	padding: 40px 0;
+	margin-bottom: 15px;
+}
+.post-list .post-body {
+		padding: 10px 20px;
+		background: url("fonts/blowbrush/instagram.jpg");
+	  font-size: 1.4em;
+	  font-family: 'Netsrak';
+	  word-spacing: 0px;
+}
+
+.post-image {
+	text-align: center;
+
+	img {
+		border: 2px solid #878E8F;
+		margin: auto;
+	}
+}
+
