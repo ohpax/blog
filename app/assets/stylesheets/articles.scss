@@ -6,8 +6,8 @@
   font-family: 'blowbrush';
   src: font-url('blowbrush.eot'); /* IE9 Compat Modes */
   src: font-url('blowbrush.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		   font-url('blowbrush.woff2') format('woff2'), /* Super Modern Browsers */
-       font-url('blowbrush.woff') format('woff'), /* Pretty Modern Browsers */
+		   // font-url('blowbrush.woff2') format('woff2'), /* Super Modern Browsers */
+       // font-url('blowbrush.woff') format('woff'), /* Pretty Modern Browsers */
        font-url('blowbrush.ttf')  format('truetype'), /* Safari, Android, iOS */
        font-url('blowbrush.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
@@ -119,7 +119,6 @@ body {
 }
 .post-list .post-body {
 		padding: 10px 20px;
-		background: url("fonts/blowbrush/instagram.jpg");
 	  font-size: 1.4em;
 	  font-family: 'Netsrak';
 }
@@ -145,15 +144,16 @@ body {
 	}
 }
 
-.footer{
-	width: 100%;
-	height: 100px;
-	background-color: #fff;
-	//bottom: 0;
-	left: 0;
-	position: absolute;
-	margin-bottom: 0;
-	p {
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;	bottom: 0;
+    background-color: #fff;
+}
+
+footer	p {
 		padding-top: 1em;
 		padding-left: 1em;
 	  font-family: 'Netsrak';
@@ -161,5 +161,4 @@ body {
   	margin-top: 1em;
 
   	}
-}
 
