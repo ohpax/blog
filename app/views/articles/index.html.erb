@@ -1,26 +1,32 @@
-<div class="container post-list">
-<p id="notice"><%= notice %></p>
-<div class="row last_article">
-    <div class="col-md-6">
-      <%last_article = @articles[0] %>
-      <div class="post-image">
-        <%= image_tag("posts/"+ last_article.image, class:"img-responsive")  %>
+  <p id="notice"><%= notice %></p>
+  <div class="jumbotron container-fluid post-list">
+    <div class="row last_article">
+      <div class="col-md-6">
+        <%last_article = @articles[0] %>
+        <div class="post-image">
+          <%= image_tag("posts/"+ last_article.image, class:"img-responsive")  %>
+        </div>
+        
       </div>
-      
-    </div>
-    <div class="col-md-6">
-      <h2><%= link_to last_article.title, last_article %></h2>
+      <div class="col-md-6">
+        <h2><%= link_to last_article.title, last_article %></h2>
 
-      <div class="post-body">
-        <%= last_article.body.split('.')[0]+"." %>
+        <div class="post-body">
+          <% body = last_article.body %>
+          <% size = body.size / 4 %>
+          <%body = body.first(size) + body[size..body.size-1].split('.')[0] %>
+          <%= body+"." %>
+        </div>
       </div>
-    </div>
-  </div> <!-- end last_article -->
-<h1>LATEST POSTS</h1>
+    </div> <!-- end last_article -->
+  </div><!-- end jumbotron -->
+<div class="container post-list">
+
+  <h1>LATEST POSTS</h1>
   <% articles = @articles.clone %> 
   <div class="row">
     <% articles.slice(1,articles.size-1).each do |article| %>
-    <div class="col-md-6">
+    <div class="col-md-6 post-preview">
 
       <div class="post-image">
         <%= image_tag("posts/"+article.image, class:"img-responsive")  %>
@@ -28,13 +34,13 @@
       <h2><%= link_to article.title, article %></h2>
 
       <div class="post-body">
-          <%= article.body.split('.')[0]+"." %>
+        <%= article.body.split('.')[0]+"." %>
       </div>
-        <div>
-          <!-- <td><%= article.author %></td> -->
-          <!-- <div class="pull-right"><%#= link_to 'Read More', article, class:"btn btn-default" %></div> -->
-        </div>
+      <div>
+        <!-- <td><%= article.author %></td> -->
+        <!-- <div class="pull-right"><%#= link_to 'Read More', article, class:"btn btn-default" %></div> -->
       </div>
+    </div>
     <% end %>
   </div>
 </div>

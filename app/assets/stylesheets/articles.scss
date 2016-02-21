@@ -1,6 +1,7 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {box-sizing: border-box;}
 @font-face {
   font-family: 'blowbrush';
   src: font-url('blowbrush.eot'); /* IE9 Compat Modes */
@@ -23,6 +24,55 @@
   src: font-url('Netsrak.otf') format('opentype'), /* IE6-IE8 */
 		   
 }
+$color_one: #51456B; //dark purpul
+$color_two: #B7C29D; //laurel green (sabze morde)
+$color_three: #6F5F94; //light purpul
+$color_four: #878E8F; //grayish green
+
+.navbar {
+	background-color: #fff;
+	color: red;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+.navbar-default .navbar-brand {
+	font-family: 'blowbrush';
+	font-size: 30px;
+	color: $color_three;
+
+}
+
+#notice {
+	margin: 0;
+}
+.navbar-toggle {
+ 	display: block;
+ }
+ 
+.modal-content{
+	background-color: $color-three;
+
+	ul {
+		list-style:none;
+		text-align: center;
+		padding: 0;
+	}
+	ul li a {
+		display: block;
+		height: 3em;
+		padding-top: 1em;
+	color: $color-two;
+	font-size: 3em;
+	}
+
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";       /* IE 8 */
+			-moz-opacity: 0.7;          /* Netscape */
+		-khtml-opacity: 0.7;        /* Safari 1.x */
+						filter: alpha(opacity=70);  /* IE 5-7 */
+
+					 opacity: 0.7;               /* Good browsers */				
+}
+
 body {
   // background-color: #E9F29D;
   }
@@ -31,12 +81,16 @@ body {
 		display: inline-block;
 	  font-family: 'Netsrak';
 	  font-size: 1.4em;
-	  border-top: 2px double #51456B;
-	  border-bottom: 2px solid #51456B;
+	  border-top: 2px double $color_one;
+	  border-bottom: 2px solid $color_one;
 	  padding: 6px 5px;
 
 	}
- 
+ .jumbotron {
+ 	background-color: $color_two;
+	border-bottom: 4px dashed $color_three;
+
+ }
 .post-list {
 	h2 {
 	font-family: 'blowbrush';
@@ -48,35 +102,64 @@ body {
 	}
 
 	h2 a{
- 	color: #51456B;
+ 	color: $color_one;
  	transition: color , 500ms;
 	}
 
 	h2 a:hover{
-	color: #6F5F94;
+	color: $color_three;
 	background: none;
 	text-decoration: none;}
 
 }
 .last_article {
-	border-bottom: 2px dashed #B7C29D;
-	padding: 40px 0;
+	// padding: 40px 0;
 	margin-bottom: 15px;
+	line-height: 2.3em;
 }
 .post-list .post-body {
 		padding: 10px 20px;
 		background: url("fonts/blowbrush/instagram.jpg");
 	  font-size: 1.4em;
 	  font-family: 'Netsrak';
-	  word-spacing: 0px;
+}
+
+.post-preview {
+	margin-top: 4em;
+}
+.post-show .post-body {
+		line-height: 2em;
+
+}
+
+.post-show .post-image {
+	padding: 2.5em 0;
 }
 
 .post-image {
 	text-align: center;
 
 	img {
-		border: 2px solid #878E8F;
+		border: 2px solid $color_four;
 		margin: auto;
 	}
+}
+
+.footer{
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+	//bottom: 0;
+	left: 0;
+	position: absolute;
+	margin-bottom: 0;
+	p {
+		padding-top: 1em;
+		padding-left: 1em;
+	  font-family: 'Netsrak';
+  	font-size: 1.8em;
+  	margin-top: 1em;
+
+  	}
 }
 

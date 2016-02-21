@@ -1,24 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+	<div class="row post-list post-show">
+		<div class="col-md-6 col-md-offset-3 post-image">
+			<%= image_tag("posts/"+@article.image, class:"img-responsive") %>
+		</div>
+		<div class="col-md-8 col-md-offset-2 ">
+      <h2><%= @article.title %></h2>
+		</div>
+		<div class="col-md-8 col-md-offset-2 post-body">
+			  <%= @article.body %>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @article.image %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @article.author %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%#= link_to 'Edit', edit_article_path(@article) %> 
+<%#= link_to 'Back', articles_path %>
