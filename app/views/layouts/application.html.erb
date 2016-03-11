@@ -39,14 +39,22 @@
 
       <ul>
         <li><%= link_to "Home", root_path%> </li>
-        <li><%= link_to 'New Post',{controller: "articles", action: "new"} %></li>
-        <li><%= link_to "posts", {action: "posts"} %></li>
+        <li><%= link_to('New Post', new_article_path) %></li>
+        <li><%= link_to("posts",posts_path) %></li>
         <li><a href="#">CONTACT</a></li>
-        
+        <li>
+        <%if user_signed_in? %>
+          <%= link_to('Sign out', destroy_user_session_path, method: :delete) %>
+        <% else %>
+          <%= link_to('Sign in', new_user_session_path )%>
+        <% end %>
+        </li>
       </ul>     
     </div>
   </div>
 </div>
+<p class="notice"> <%= notice %> </p>
+<p class="alert"> <%= alert %> </p>
 <%= yield %>
 <footer>
   <div class="container">
