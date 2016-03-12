@@ -42,9 +42,12 @@ $color_four: #878E8F; //grayish green
 
 }
 
-#notice {
-	margin: 0;
+.alert {
+	position: absolute;
+	display: block;
+	width: 100%;
 }
+
 .navbar-toggle {
  	display: block;
  }
@@ -167,3 +170,9 @@ footer	p {
 	opacity: 1;
 	right: 0.6em;
 }
+
+textarea {
+	resize: none;
+}
+
+
