@@ -1,12 +1,15 @@
 <div>
-	<% if signed_in? %>
+
+	<% if user_signed_in? %>
+	
 		<h4>Comment: </h4>
 		<%= form_for([@article, @article.comments.build]) do |f| %>
+
 			<div class="form-group">
 				<%= f.label :body, "Message", class: "control-label" %>
 				<%= f.text_area :body, class: "form-control", rows: "5" %>
 			</div>
 			<%= f.submit "Submit", class: "btn btn-default" %>
-		<% end %>
-	<% end %>
+		<%end%>
+	<%end%>
 </div>

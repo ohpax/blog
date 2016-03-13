@@ -52,6 +52,13 @@ $color_four: #878E8F; //grayish green
  	display: block;
  }
  
+ .article-comments {
+ 	margin-top: 50px;
+ }
+ .article-comments hr {
+ 	border-top: 1px solid $color_four;
+ }
+
 .modal-content{
 	background-color: $color-three;
 

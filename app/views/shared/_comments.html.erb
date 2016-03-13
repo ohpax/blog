@@ -1,13 +1,17 @@
-<div class="article-comments">
+<div class="row">
+<div class="article-comments col-md-10 col-md-offset-1">
 	<% @comments.each do |comment| %>
-		<div class="row">
-			<hr>
-			<p>
-				<%= comment.article.user.first_name if comment.article.user.first_name %> <small><em> <%= "#{time_ago_in_words(comment.created_at) unless comment.created_at.blank? } ago" %> </em></small>
-			</p>
-			<p>
-				<%= comment.body %>
-			</p>
-		</div>
+	<% if comment.body %>
+	<div class="row">
+		<hr>
+		<p>
+			<%= comment.article.user.first_name %> <small><em> <%= "#{time_ago_in_words(comment.created_at) unless comment.created_at.blank? } ago" %> </em></small>
+		</p>
+		<p>
+			<%= comment.body %>
+		</p>
+	</div>
 	<% end %>
+	<% end %>
+</div>
 </div>
