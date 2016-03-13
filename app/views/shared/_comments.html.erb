@@ -14,8 +14,10 @@
 	<% end %>
 	<% end %>
 </div>
+<% if @comments.length > 5 %>
 <div class="apple_pagination pagination
 ">
 	<%= will_paginate @comments %>
 </div>
+<% end %>
 </div>
