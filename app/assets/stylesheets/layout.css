@@ -5,3 +5,37 @@
 .alert {
 	z-index:1000;
 }
+
+.search-box {
+	padding-top: 7px;
+	text-align: center;
+}
+
+.search-box .btn {
+	width: 70px;
+}
+
+@media(max-width: 767px)
+{
+	.search-box {
+		padding-bottom: 15px;
+	}
+
+	.search-box input {
+		width: 50%;
+		margin: auto;
+	}
+.search-box .btn {
+	width: 30%;
+}
+
+@media(max-width: 470px)
+{
+
+	.search-box input {
+		width: 80%;
+		margin: auto;
+	}
+.search-box .btn {
+	width: 60%;
+}
