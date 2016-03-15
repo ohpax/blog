@@ -7,7 +7,9 @@ class Ability
         can :read, Article
       if user.admin?
         can :manage, Article, :user_id => user.id
+        can :manage, User
       else
+      	can :manage, User, :id => user.id
       end
  
   end
