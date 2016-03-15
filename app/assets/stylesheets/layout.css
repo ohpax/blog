@@ -1,7 +1,92 @@
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    background-color: #fff;
+    font-family: 'Netsrak';
+    font-size: 1.4em;
+  }
+
+
+footer	p {
+		padding-top: 1em;
+		padding-left: 1em;
+	  font-family: 'Netsrak';
+  	font-size: 1.2em;
+  	margin-top: 1em;
+
+  	}
+
+
+
+.email-sub {
+	text-align: center;
+	padding: 30px 0;
+}
+.email-sub input[type=text] {
+  	width: 70%;
+  	margin: auto;
+  }	
+
+
 .main{
 	padding-bottom: 100px;
 }
 
+.btn {
+	font-family: 'Netsrak';
+}
+
 .alert {
 	z-index:1000;
+}
+
+.search-box {
+	padding-top: 7px;
+	text-align: center;
+}
+
+.search-box .btn {
+	width: 70px;
+}
+
+@media(max-width: 767px)
+{
+	.search-box {
+		padding-bottom: 15px;
+	}
+
+	.search-box input {
+		width: 50%;
+		margin: auto;
+	}
+.search-box .btn {
+	width: 30%;
+}
+}
+@media(max-width: 470px)
+{
+
+	.search-box input {
+		width: 80%;
+		margin: auto;
+	}
+.search-box .btn {
+	width: 60%;
+}
+
+}
+
+
+  	
+.close {
+	font-size: 3em;
+	color: #fff;
+	opacity: 1;
+	right: 0.6em;
+}
+textarea {
+	resize: none;
 }

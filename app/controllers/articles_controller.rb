@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, except: [:show, :index, :posts]
+  before_filter :authenticate_user!, except: [:show, :index, :posts, :search]
   load_and_authorize_resource
   # GET /articles
   # GET /articles.json
@@ -65,6 +65,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def search
+    term =  params[:term]
+    if term 
+      @articles = Article.where("LOWER(title) LIKE ?","%#{term.downcase}%")
+    else 
+      @articles = Article.all
+  end
+  end
   
   
   private
