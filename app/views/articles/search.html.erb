@@ -1,0 +1,26 @@
+
+<div class="container post-list">
+
+  <h1>Search resault for <%= params[:term] %></h1>
+  <% articles = @articles.clone %> 
+  <div class="row">
+    <% articles.each do |article| %>
+    <div class="col-md-6 post-preview">
+
+      <div class="post-image">
+        <%= image_tag("posts/"+article.image, class:"img-responsive")  %>
+      </div>
+      <h2><%= link_to article.title, article %></h2>
+
+      <div class="post-body">
+        <%= article.body.split('.')[0]+"." %>
+      </div>
+      <div>
+        <!-- <td><%= article.author %></td> -->
+        <!-- <div class="pull-right"><%#= link_to 'Read More', article, class:"btn btn-default" %></div> -->
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<br>

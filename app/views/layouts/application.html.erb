@@ -35,10 +35,10 @@
     </div>     
 
      <div class="col-sm-6 col-xs-12 pull-left-sm search-box">
-        <%= form_tag("articles/search", method: "get" , class: "form-inline" ) do %>
+        <%= form_tag("search", method: "get" , class: "form-inline" ) do %>
           <div class="form-group">
             <%= label_tag :term, "Search", class: "control-label sr-only" %>
-            <%= text_field_tag :term, nil , class: "form-control" %> 
+            <%= text_field_tag :term, nil , class: "form-control", placeholder: "Search ..." %> 
           </div>
           <%= submit_tag "GO", class: "btn btn-default" %>
         <% end %>
@@ -83,7 +83,16 @@
 </div>
 <footer>
   <div class="container">
-  <p>&copy 2016 Christ Kho</p>
+    <div class="row">
+    
+      <div class="col-md-6 col-xs-12 pull-right">
+        <%= render "shared/email_subscribtion" %>
+      </div>
+        <div class="col-md-6 col-xs-12">
+        <p>&copy 2016 Christ Kho</p>
+      </div>
+    </div>
+  
   </div>
 </footer>
 </body>

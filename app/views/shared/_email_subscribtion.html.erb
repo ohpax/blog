@@ -1,0 +1,9 @@
+<div class="email-sub">
+	<%= form_tag "/subscribe" do %>
+		<div class="form-group">
+			<%= label_tag :email, "Join my email list: ", class: "control-label" %>
+			<%= text_field_tag :email, nil, class: "form-control" %>
+		</div>
+			<%= submit_tag "Sunscribe", class: "btn btn-default" %>
+	<%end%>
+</div>
